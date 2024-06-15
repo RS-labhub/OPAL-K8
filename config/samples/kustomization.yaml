@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- opal_v1alpha1_opaldeployment.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

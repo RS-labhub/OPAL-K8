@@ -1,0 +1,6 @@
+apiVersion: opal.example.com/v1alpha1
+kind: OPALDeployment
+metadata:
+  name: opaldeployment-sample
+spec:
+  # Add fields here

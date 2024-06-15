@@ -1,0 +1,19 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: opal-k8
+repo: github.com/example/opal-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: opal
+  kind: OPALDeployment
+  path: github.com/example/opal-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

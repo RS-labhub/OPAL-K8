@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opal-server
+  namespace: opal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opal-server
+  template:
+    metadata:
+      labels:
+        app: opal-server
+    spec:
+      containers:
+      - name: opal-server
+        image: authorizon/opal-server:latest
+        ports:
+        - containerPort: 7002
+        env:
+        - name: OPAL_POLICY_REPO_URL
+          value: "https://github.com/your-policy-repo.git"
+        - name: OPAL_POLICY_REPO_MAIN_BRANCH
+          value: "main"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: opal-server
+  namespace: opal
+spec:
+  selector:
+    app: opal-server
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 7002

@@ -1,0 +1,24 @@
+# permissions for end users to edit opaldeployments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: opaldeployment-editor-role
+rules:
+- apiGroups:
+  - opal.example.com
+  resources:
+  - opaldeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - opal.example.com
+  resources:
+  - opaldeployments/status
+  verbs:
+  - get
