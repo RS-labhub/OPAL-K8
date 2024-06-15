@@ -15,5 +15,5 @@ export const getUserData = async (username: string) => {
   const connection = await connectToDatabase();
   const [rows] = await connection.execute('SELECT karma, location FROM users WHERE username = ?', [username]);
   await connection.end();
-  return rows[0];
+  return rows;
 };
