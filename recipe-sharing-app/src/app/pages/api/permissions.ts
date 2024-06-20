@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-export default async function handler(
+export async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
@@ -24,7 +24,7 @@ export default async function handler(
       };
 
       // Send the policy evaluation request to the OPAL server
-      const response = await axios.post('http://opal-server-url/v1/data/example/allow', data);
+      const response = await axios.post('http://localhost:7002/v1/data/example/allow', data);
 
       // Return the result of the policy evaluation to the client
       res.status(200).json({ allowed: response.data.result });
