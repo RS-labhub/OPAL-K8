@@ -8,10 +8,8 @@
 
 <br>
 
-## 🧑‍🍳 Recipe   
+# 🧑‍🍳 Recipe   
  **Recipe Web Application** Built a k8s controller that will allow the deployment of OPAL as part of the k8s platform. Developed a Recipe Webapp where users' karma and location affect their permissions to perform operations. Fetched the data dynamically from a MySQL server.
-
-<br>
 
 ## 🪶 Features
 - 📖 **User Karma and Location-Based Permissions** :
