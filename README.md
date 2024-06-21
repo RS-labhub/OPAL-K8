@@ -4,7 +4,7 @@
 </h1>
 
 
-<> image here <>
+<img align="center" src="preview/title.png">
 
 <br>
 
@@ -56,25 +56,27 @@
 
 ##  :movie_camera: Demo
 - After a brief introduction, let's dive a little more inside the project.
-- Here is the walk-through of **Recipe 🧑‍🍳**. If you want to witness a more a hd version, [click here]()
+- Here is the walk-through of **Recipe 🧑‍🍳**. If you want to witness a more a hd version, [click here](https://youtu.be/lLmQM-04PTc)
 
-<> video here <>
+<video align="center" controls>
+  <source src="preview/recipe_app.mp4" type="video/mp4">
+</video>
 
 <p align="center">Video Demonstration</p>
 
 ### Screenshots
 
 <p align="center">
-  <img src=""  />
-  <p align="center"></p>
+  <img src="preview/recipeApp.gif"  />
+  <p align="center">working demo</p>
   <br>
   <p align="center">
-  <img src=""  />
-  <p align="center"></p>
+  <img src="preview/landing_page.png"  />
+  <p align="center">landing page</p>
   <br>
   <p align="center">
-  <img src=""  />
-  <p align="center"></p>
+  <img src="preview/users.jpg"  />
+  <p align="center">users and live permission</p>
 </p>
 
 <br>
