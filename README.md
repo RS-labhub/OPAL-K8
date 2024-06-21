@@ -11,6 +11,8 @@
 # 🧑‍🍳 Recipe   
  **Recipe Web Application** Built a k8s controller that will allow the deployment of OPAL as part of the k8s platform. Developed a Recipe Webapp where users' karma and location affect their permissions to perform operations. Fetched the data dynamically from a MySQL server.
 
+<br>
+
 ## 🪶 Features
 - 📖 **User Karma and Location-Based Permissions** :
     - Dynamic Permission Management: Users' permissions to perform various operations within the application are dynamically managed based on their karma and location. This ensures personalized and context-specific access control.
@@ -39,11 +41,11 @@
 
 <br>
 
-## :books: Index
+# :books: Index
 
 - [Demo](#movie_camera-Demo)
 - [Screenshots](#screenshots)
-- [Project Tree](#pr0ject_tree)
+- [Project Tree](#project-tree)
 - [Use Cases](#other-real-world-use-cases-of-opal-open-policy-administration-layer)
 - [Set Up](#outbox_tray-Set-up)
 - [Contribute](#building_construction-Contribute)
@@ -79,6 +81,7 @@
 <br>
 
 ## Project Tree
+```bash
 OPAL-K8/
 ├── api/
 │   └── v1alpha1/
@@ -175,6 +178,7 @@ OPAL-K8/
 ├── package.json
 ├── policy.yaml
 └── rbac.rego
+```
 
 <br><br>
 
