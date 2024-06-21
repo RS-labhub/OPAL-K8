@@ -58,7 +58,7 @@
 - After a brief introduction, let's dive a little more inside the project.
 - Here is the walk-through of **Recipe 🧑‍🍳**. If you want to witness a more a hd version, [click here](https://youtu.be/lLmQM-04PTc)
 
-<video align="center" controls>
+<video controls>
   <source src="preview/recipe_app.mp4" type="video/mp4">
 </video>
 
