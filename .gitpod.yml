@@ -1,3 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+  
 tasks:
   - name: Install Operator SDK
     init: |
@@ -9,10 +12,31 @@ tasks:
       sudo mv operator-sdk_linux_amd64 /usr/local/bin/operator-sdk
       operator-sdk version
 
-  - name: Install kubectl
-    init: |
-      sudo apt-get update
-      curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-      chmod +x kubectl
-      sudo mv kubectl /usr/local/bin/
-      kubectl version --client
+  - before: |
+      # Install kubectl
+      curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+      chmod +x ./kubectl
+      sudo mv ./kubectl /usr/local/bin/kubectl
+      # Install Minikube
+      curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+      chmod +x minikube
+      sudo mv minikube /usr/local/bin/
+      # Install conntrack
+      sudo apt-get update -y
+      sudo apt-get install -y conntrack
+      # Start Minikube
+      minikube start --driver=docker
+      # Set up kubectl to use Minikube's context
+      minikube kubectl -- get po -A
+  - name: Deploy OPAL Controller
+    command: kubectl apply -f opal-controller-deployment.yaml
+
+    # Specify the ports to expose
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+# Specify the services to run in the background
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
