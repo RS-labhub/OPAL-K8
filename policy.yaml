@@ -1,0 +1,23 @@
+Policies:
+  - ID: canPost
+    Description: Determine if user can post based on karma and location
+    Rules:
+      - Condition: 'karma > 50 && location == "US"'
+        Effect: Allow
+      - Condition: 'karma > 20'
+        Effect: Allow
+      - Effect: Deny
+
+  - ID: canDelete
+    Description: Determine if user can delete based on karma
+    Rules:
+      - Condition: 'karma > 100'
+        Effect: Allow
+      - Effect: Deny
+
+  - ID: canEdit
+    Description: Determine if user can edit based on location
+    Rules:
+      - Condition: 'location == "US"'
+        Effect: Allow
+      - Effect: Deny
