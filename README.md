@@ -60,7 +60,7 @@
 
 <br>
 
-[![Recipe 🧑‍🍳](preview/thumbnail.png)](preview/recipe_app.mp4)
+[![Recipe 🧑‍🍳](preview/thumbnail.jpg)](preview/recipe_app.mp4)
 
 <p align="center">Video Demonstration, please 🔈🔉🔊</p>
 
