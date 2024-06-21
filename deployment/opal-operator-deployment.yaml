@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opal-operator
+  namespace: opal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: opal-operator
+  template:
+    metadata:
+      labels:
+        name: opal-operator
+    spec:
+      containers:
+      - name: opal-operator
+        image: rohansrma/opal-operator:latest
+        command:
+        - opal-operator
+        imagePullPolicy: Always

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opal-controller
+  labels:
+    app: opal-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opal-controller
+  template:
+    metadata:
+      labels:
+        app: opal-controller
+    spec:
+      containers:
+        - name: opal-controller
+          image: rohansrma/opal-controller:latest
+          ports:
+            - containerPort: 8080

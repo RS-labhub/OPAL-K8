@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opal-client
+  namespace: opal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opal-client
+  template:
+    metadata:
+      labels:
+        app: opal-client
+    spec:
+      containers:
+      - name: opal-client
+        image: authorizon/opal-client:latest
+        ports:
+        - containerPort: 8181
+        env:
+        - name: OPAL_SERVER_URL
+          value: "http://opal-server.opal.svc.cluster.local:7002"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: opal-client
+  namespace: opal
+spec:
+  selector:
+    app: opal-client
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8181
