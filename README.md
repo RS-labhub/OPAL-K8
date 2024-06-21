@@ -43,15 +43,142 @@
 
 - [Demo](#movie_camera-Demo)
 - [Screenshots](#screenshots)
+- [Project Tree](#pr0ject_tree)
+- [Use Cases](#other-real-world-use-cases-of-opal-open-policy-administration-layer)
 - [Set Up](#outbox_tray-Set-up)
 - [Contribute](#building_construction-Contribute)
 - [Project Author](#people_holding_hands-Meet-the-Author)
 - [Contact](#email-contact)
 
 <br>
+
+##  :movie_camera: Demo
+- After a brief introduction, let's dive a little more inside the project.
+- Here is the walk-through of **Recipe 🧑‍🍳**. If you want to witness a more a hd version, [click here]()
+
+<> video here <>
+
+<p align="center">Video Demonstration</p>
+
+### Screenshots
+
+<p align="center">
+  <img src=""  />
+  <p align="center"></p>
+  <br>
+  <p align="center">
+  <img src=""  />
+  <p align="center"></p>
+  <br>
+  <p align="center">
+  <img src=""  />
+  <p align="center"></p>
+</p>
+
+<br>
 <br>
 
-# Other Real-World Use Cases of OPAL (Open Policy Administration Layer)
+## Project Tree
+OPAL-K8/
+├── api/
+│   └── v1alpha1/
+│       ├── groupversion_info.go
+│       ├── opalcontroller_types.go
+│       └── zz_generated.deepcopy.go
+├── config/
+│   ├── certmanager/
+│   │   ├── certificate.yaml
+│   │   ├── kustomization.yaml
+│   │   └── kustomizeconfig.yaml
+│   ├── crd/
+│   │   ├── bases/
+│   │   │   └── rs-labhub.github.io_opalcontrollers.yaml
+│   │   ├── kustomization.yaml
+│   │   └── patches/
+│   │       └── cainjection_in_opalcontrollers.yaml
+│   ├── default/
+│   │   ├── kustomization.yaml
+│   │   └── manager_auth_proxy_patch.yaml
+│   ├── manager/
+│   │   ├── controller_manager_config.yaml
+│   │   ├── kustomization.yaml
+│   │   └── manager.yaml
+│   ├── prometheus/
+│   │   ├── kustomization.yaml
+│   │   └── monitor.yaml
+│   ├── rbac/
+│   │   ├── auth_proxy_client_clusterrole.yaml
+│   │   ├── auth_proxy_role.yaml
+│   │   ├── auth_proxy_role_binding.yaml
+│   │   ├── auth_proxy_service.yaml
+│   │   ├── kustomization.yaml
+│   │   ├── leader_election_role.yaml
+│   │   ├── leader_election_role_binding.yaml
+│   │   ├── opalcontroller_editor_role.yaml
+│   │   ├── opalcontroller_viewer_role.yaml
+│   │   ├── role_binding.yaml
+│   │   └── service_account.yaml
+│   ├── samples/
+│   │   └── rs-labhub_v1alpha1_opalcontroller.yaml
+│   └── webhook/
+│       ├── kustomization.yaml
+│       ├── kustomizeconfig.yaml
+│       ├── service.yaml
+│       └── webhook.yaml
+├── controllers/
+│   └── opalcontroller_controller.go
+├── database/
+│   └── SQL/
+│       ├── karma_location.sql
+│       ├── karma_location_with_output.sql
+│       ├── recipe.sql
+│       └── user.sql
+├── deployment/
+│   ├── mysql-deployment.yaml
+│   ├── opal-controller-deployment.yaml
+│   ├── opal-service.yaml
+│   ├── recipe-deployment.yaml
+│   └── recipe-service.yaml
+├── hack/
+│   └── boilerplate.go.txt
+├── recipe-sharing-app/
+│   ├── backend/
+│   │   ├── Dockerfile
+│   │   ├── app.py
+│   │   ├── requirements.txt
+│   │   └── templates/
+│   │       └── index.html
+│   └── frontend/
+│       ├── Dockerfile
+│       ├── package-lock.json
+│       ├── package.json
+│       └── src/
+│           ├── App.js
+│           ├── App.test.js
+│           ├── index.css
+│           ├── index.js
+│           ├── logo.svg
+│           ├── reportWebVitals.js
+│           └── setupTests.js
+├── .dockerignore
+├── .gitignore
+├── .gitpod.yml
+├── Dockerfile
+├── Makefile
+├── PROJECT
+├── README.md
+├── docker-compose.yml
+├── go.mod
+├── go.sum
+├── main.go
+├── package-lock.json
+├── package.json
+├── policy.yaml
+└── rbac.rego
+
+<br><br>
+
+## Other Real-World Use Cases of OPAL (Open Policy Administration Layer)
 <p align="center">
   Open Policy Administration Layer (OPAL) is a powerful tool for managing dynamic authorization policies in real-time. By integrating OPAL into your application, you can leverage dynamic, context-aware policies that respond to changes in user attributes, environmental conditions, and application state. Below, we explore several real-world use cases of OPAL with detailed examples to demonstrate its versatility and effectiveness.
 </p>
@@ -214,29 +341,6 @@ These examples illustrate the flexibility and power of OPAL in implementing dyna
 
 For more detailed information on how to integrate OPAL into your application, visit the [Official OPAL documentation](https://github.com/authorizon/opal).
 
-
-###  :movie_camera: Demo
-- After a brief introduction, let's dive a little more inside the project.
-- Here is the walk-through of **Recipe 🧑‍🍳**. If you want to witness a more a hd version, [click here]()
-
-<> video here <>
-
-<p align="center">Video Demonstration</p>
-
-### Screenshots
-
-<p align="center">
-  <img src=""  />
-  <p align="center"></p>
-  <br>
-  <p align="center">
-  <img src=""  />
-  <p align="center"></p>
-  <br>
-  <p align="center">
-  <img src=""  />
-  <p align="center"></p>
-</p>
 
 <br>
 
