@@ -1,10 +1,8 @@
-import pageHome from './pages/index'
-
-// pages/index.tsx
+// import Home from './pages/index'
 
 import Head from 'next/head';
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
       <Head>
@@ -29,7 +27,7 @@ export default function Home() {
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold mb-4">Discover and Share Amazing Recipes</h2>
             <p className="text-gray-600 mb-8">Join our community and explore thousands of recipes from around the world.</p>
-            <a href="/add-recipe" className="bg-green-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-green-700">Add Your Recipe</a>
+            <a href="/custom" className="bg-green-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-green-700">Add Your Recipe</a>
           </div>
         </section>
 
@@ -75,7 +73,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-green-600 text-white p-4 text-center">
-        <p>&copy; 2024 Recipe App. All rights reserved.</p>
+        <p>&copy; 2024 Chef's Delight. All rights reserved.</p>
       </footer>
     </div>
   );
