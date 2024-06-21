@@ -469,7 +469,7 @@ $~$
 
 ## :people_holding_hands: Meet the Author
 
-<img  src="Preview/author.jpeg" alt="Author">
+<img  src="preview/Author.jpg" alt="Author">
 
 
 ### :email: Contact 
