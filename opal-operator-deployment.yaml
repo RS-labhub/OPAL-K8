@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: opal-operator
-        image: your-docker-repo/opal-operator:tag
+        image: rohansrma/opal-operator:latest
         command:
         - opal-operator
         imagePullPolicy: Always
