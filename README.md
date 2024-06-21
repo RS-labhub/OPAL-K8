@@ -64,6 +64,8 @@
 
 <p align="center">Video Demonstration, please 🔈🔉🔊</p>
 
+> In case, the video is not visible, refer this link: https://youtu.be/lLmQM-04PTc
+
 ### Screenshots
 
 <p align="center">
