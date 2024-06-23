@@ -46,6 +46,7 @@
 - [Demo](#movie_camera-Demo)
 - [Screenshots](#screenshots)
 - [Project Tree](#project-tree)
+- [Policy Management Flow](#policy-management-flow)
 - [Use Cases](#other-real-world-use-cases-of-opal-open-policy-administration-layer)
 - [Set Up](#outbox_tray-Set-up)
 - [Contribute](#building_construction-Contribute)
@@ -184,7 +185,32 @@ OPAL-K8/
 └── rbac.rego
 ```
 
-<br><br>
+<br>
+
+# Policy Management Flow:
+```bash
+    +-----------+    Policy Definition    +---------+
+    | Policy    |  <--------------------  | YAML    |
+    | Admin     |                         | File    |
+    +-----------+                         +---------+
+          |
+          | Policy Loading
+          v
+    +-----------+     Policy Enforcement    +-----------+
+    | OPAL      |  <----------------------  | Application|
+    | Service   |                          |  Requests   |
+    +-----------+                          +-----------+
+          |
+          | Decision
+          v
+    +-----------+
+    | Access    |
+    | Granted/  |
+    | Denied    |
+    +-----------+
+```
+
+<br>
 
 ## Other Real-World Use Cases of OPAL (Open Policy Administration Layer)
 <p align="center">
