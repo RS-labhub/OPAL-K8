@@ -11,7 +11,7 @@ services:
     environment:
       - OPAL_BROADCAST_URI=postgres://postgres:postgres@broadcast_channel:5432/postgres
       - UVICORN_NUM_WORKERS=4
-      - OPAL_POLICY_REPO_URL=https://github.com/permitio/opal-example-policy-repo
+      - OPAL_POLICY_REPO_URL=https://github.com/RS-labhub/opal-example-policy-repo
       - OPAL_POLICY_REPO_POLLING_INTERVAL=30
       - OPAL_DATA_CONFIG_SOURCES={"config":{"entries":[{"url":"http://opal_server:7002/policy-data","topics":["policy_data"],"dst_path":"/static"}]}}
       - OPAL_LOG_FORMAT_INCLUDE_PID=true
