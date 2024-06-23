@@ -210,6 +210,29 @@ OPAL-K8/
     +-----------+
 ```
 
+# Synchronization Workflow
+```bash
+    +------------------+    Policy Pull    +-----------------+
+    | Policy Repository|  <--------------  | OPAL Server     |
+    | (Permit.io)      |                   |                 |
+    +------------------+                   +-----------------+
+          |
+          | Policy Push
+          v
+    +-----------+   Policy Synchronization   +-----------+
+    | OPAL      |  ----------------------->  | OPA       |
+    | Service   |                            | Instances |
+    +-----------+                            +-----------+
+          |
+          | Real-time Policy Updates
+          v
+    +-----------+
+    | Application|
+    | Access     |
+    +-----------+
+
+```
+
 <br>
 
 ## Other Real-World Use Cases of OPAL (Open Policy Administration Layer)
