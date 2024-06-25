@@ -47,6 +47,7 @@
 - [Screenshots](#screenshots)
 - [Project Tree](#project-tree)
 - [Policy Management Flow](#policy-management-flow)
+- [Synchronization Workflow](#synchronization-Workflow)
 - [Use Cases](#other-real-world-use-cases-of-opal-open-policy-administration-layer)
 - [Set Up](#outbox_tray-Set-up)
 - [Contribute](#building_construction-Contribute)
@@ -65,6 +66,7 @@
 
 <p align="center">Video Demonstration, please 🔈🔉🔊</p>
 
+> [!IMPORTANT]
 > In case, the video is not visible, refer this link: https://youtu.be/lLmQM-04PTc
 
 ### Screenshots
@@ -474,7 +476,8 @@ These are the steps required to install and run the Recipe 🧑‍🍳 project:
         ```
 <br>
 
-> Note: The running port should look like this:
+> [!NOTE]
+> The running port should look like this:
 Open `http://localhost:3000` in your web browser to see the list of users and recipes filtered by karma and location.
 
 <br>
@@ -535,5 +538,5 @@ $~$
 <br>
 
 <p align="center">
-   Thank you for visting this Repo <br>If you like it, <a href="https://github.com/RS-labhub/I-Love-You/stargazers">star</a> ⭐ it
+   Thank you for visting this Repo <br>If you like it, <a href="https://github.com/RS-labhub/OPAL-K8/stargazers">star</a> ⭐ it
 </p>
